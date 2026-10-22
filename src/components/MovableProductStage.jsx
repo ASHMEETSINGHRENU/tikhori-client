@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Sparkles, ShoppingBag, Move, Check, ArrowRight, Play, Pause } from 'lucide-react';
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
 const HERO_SPICES = [

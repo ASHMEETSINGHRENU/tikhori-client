@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import HeroComptoirSection from '../components/public/HeroComptoirSection';
-import ComptoirStoryBlock from '../components/public/ComptoirStoryBlock';
-import ComptoirFreshKitchen from '../components/public/ComptoirFreshKitchen';
-import FeaturedProductsSection from '../components/public/FeaturedProductsSection';
-import ComptoirStockistFinder from '../components/public/ComptoirStockistFinder';
-import ComptoirClubSection from '../components/public/ComptoirClubSection';
-import ComptoirTileRibbon from '../components/public/ComptoirTileRibbon';
-import ComptoirNewsletter from '../components/public/ComptoirNewsletter';
-import ProductQuickViewModal from '../components/common/ProductQuickViewModal';
+import HeroComptoirSection from '../components/HeroComptoirSection';
+import ComptoirStoryBlock from '../components/ComptoirStoryBlock';
+import ComptoirFreshKitchen from '../components/ComptoirFreshKitchen';
+import FeaturedProductsSection from '../components/FeaturedProductsSection';
+import ComptoirStockistFinder from '../components/ComptoirStockistFinder';
+import ComptoirClubSection from '../components/ComptoirClubSection';
+import ComptoirTileRibbon from '../components/ComptoirTileRibbon';
+import ComptoirNewsletter from '../components/ComptoirNewsletter';
+import ProductQuickViewModal from '../components/ProductQuickViewModal';
 import { api } from '../services/api';
 
 const HomePage = () => {

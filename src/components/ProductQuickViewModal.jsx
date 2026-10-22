@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Star, ShoppingBag, ShieldCheck, Sparkles, ArrowRight, Flame } from 'lucide-react';
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
 const ProductQuickViewModal = ({ product, onClose }) => {

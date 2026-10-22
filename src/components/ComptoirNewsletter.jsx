@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { api } from '../../services/api';
+import { api } from '../services/api';
 
 const ComptoirNewsletter = () => {
   const [email, setEmail] = useState('');

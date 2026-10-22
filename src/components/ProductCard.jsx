@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, Star, Eye, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../context/CartContext';
 
 const ProductCard = ({ product, onQuickView }) => {
   const { addToCart } = useCart();

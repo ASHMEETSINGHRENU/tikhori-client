@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, ArrowRight } from 'lucide-react';
-import ProductCard from '../common/ProductCard';
+import ProductCard from './ProductCard';
 
 const FeaturedProductsSection = ({ products = [], onQuickView }) => {
   // Filter 4 core flagship products

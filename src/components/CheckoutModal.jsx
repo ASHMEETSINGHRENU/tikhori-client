@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, ShieldCheck, CreditCard, Banknote, QrCode, ArrowRight, Truck } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { useCart } from '../../context/CartContext';
-import { useAuth } from '../../context/AuthContext';
-import { api } from '../../services/api';
+import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
+import { api } from '../services/api';
 
 const CheckoutModal = () => {
   const { isCheckoutOpen, setIsCheckoutOpen, cartItems, subtotal, discountAmount, shippingFee, total, clearCart } = useCart();

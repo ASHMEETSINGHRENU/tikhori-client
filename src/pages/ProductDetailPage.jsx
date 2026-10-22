@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Star, ShoppingBag, ShieldCheck, ArrowRight, Sparkles, CheckCircle2, ChevronRight, Truck, RefreshCw } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { api } from '../services/api';
-import ProductCard from '../components/common/ProductCard';
+import ProductCard from '../components/ProductCard';
 
 const ProductDetailPage = () => {
   const { slug } = useParams();

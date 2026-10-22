@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Filter, SlidersHorizontal, Sparkles, Check, ChevronDown } from 'lucide-react';
-import ProductCard from '../components/common/ProductCard';
-import ProductQuickViewModal from '../components/common/ProductQuickViewModal';
+import ProductCard from '../components/ProductCard';
+import ProductQuickViewModal from '../components/ProductQuickViewModal';
 import { api } from '../services/api';
 
 const CATEGORIES = [

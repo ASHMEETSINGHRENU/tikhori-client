@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import AnnouncementBar from './components/common/AnnouncementBar';
-import Navbar from './components/common/Navbar';
-import ComptoirFooter from './components/common/ComptoirFooter';
-import CartDrawer from './components/common/CartDrawer';
-import CheckoutModal from './components/common/CheckoutModal';
-import AuthModal from './components/common/AuthModal';
+import AnnouncementBar from './components/AnnouncementBar';
+import Navbar from './components/Navbar';
+import ComptoirFooter from './components/ComptoirFooter';
+import CartDrawer from './components/CartDrawer';
+import CheckoutModal from './components/CheckoutModal';
+import AuthModal from './components/AuthModal';
 
 // Public Pages
 import HomePage from './pages/HomePage';
