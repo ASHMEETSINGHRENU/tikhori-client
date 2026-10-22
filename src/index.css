@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-orange: #E85A18;
+  --color-maroon: #4A121A;
+  --color-yellow: #FCE74C;
+  --color-pink: #E62E6B;
+  --color-teal: #009E96;
+  --color-cream: #FBF6ED;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF6ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #E85A18;
+  border-radius: 9999px;
+  border: 2px solid #FBF6ED;
+}
+
+/* Typography styles */
+.font-fatface {
+  font-family: 'Abril Fatface', cursive;
+}
+.font-fraunces {
+  font-family: 'Fraunces', serif;
+}
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Comptoir Libanais Iconic Vintage Tile Pattern */
+.bg-tile-pattern {
+  background-color: #0D4744;
+  background-image: radial-gradient(#E85A18 20%, transparent 20%), radial-gradient(#FCE74C 20%, transparent 20%), radial-gradient(#E62E6B 15%, transparent 15%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px, 15px 15px;
+}
+
+/* Authentic Geometric Floral Tile Pattern (SVG generated) */
+.comptoir-tiles {
+  background-color: #0f403c;
+  background-image: 
+    radial-gradient(circle at 50% 50%, #fbe84c 6px, transparent 7px),
+    radial-gradient(circle at 0 0, #e62e6b 10px, transparent 11px),
+    radial-gradient(circle at 100% 0, #e62e6b 10px, transparent 11px),
+    radial-gradient(circle at 100% 100%, #e62e6b 10px, transparent 11px),
+    radial-gradient(circle at 0 100%, #e62e6b 10px, transparent 11px),
+    linear-gradient(45deg, #e85a18 25%, transparent 25%),
+    linear-gradient(-45deg, #e85a18 25%, transparent 25%),
+    linear-gradient(135deg, #e85a18 25%, transparent 25%),
+    linear-gradient(-135deg, #e85a18 25%, transparent 25%);
+  background-size: 64px 64px;
+  background-position: 32px 32px, 0 0, 64px 0, 64px 64px, 0 64px, 0 0, 0 0, 0 0, 0 0;
+}
+
+/* Moroccan / Indian Geometric Tile Ribbon */
+.tile-ribbon {
+  height: 28px;
+  width: 100%;
+  background: 
+    repeating-linear-gradient(45deg, #009E96 0, #009E96 14px, #E85A18 14px, #E85A18 28px, #FCE74C 28px, #FCE74C 42px, #E62E6B 42px, #E62E6B 56px);
+  border-top: 2px solid #4A121A;
+  border-bottom: 2px solid #4A121A;
+}
+
+/* Scalloped Badge Sticker */
+.scalloped-badge {
+  position: relative;
+  background: #E85A18;
+  color: #FFFDF9;
+  padding: 12px 18px;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(232, 90, 24, 0.4);
+  transform: rotate(-10deg);
+}
+
+/* Vintage Postmark Stamp */
+.vintage-stamp {
+  border: 2px dashed #C9460C;
+  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(14deg);
+  opacity: 0.85;
+}
+
+/* Vintage Photo Polaroid Frame */
+.polaroid-frame {
+  background: #FFFDF9;
+  padding: 10px 10px 24px 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Arched Keyhole / Temple Doorway */
+.arch-doorway {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+/* Button Classes matching Comptoir Libanais */
+.btn-yellow-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: #FCE74C;
+  color: #4A121A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.6rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(252, 231, 76, 0.35);
+}
+.btn-yellow-pill:hover {
+  background-color: #FFF066;
+  transform: scale(1.04);
+}
+
+.btn-pink-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: #E62E6B;
+  color: #FFFDF9;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.6rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(230, 46, 107, 0.35);
+}
+.btn-pink-pill:hover {
+  background-color: #FF4282;
+  transform: scale(1.04);
+}
+
+.btn-teal-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: #009E96;
+  color: #FFFDF9;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.3rem;
+  transition: all 0.25s ease;
+}
+.btn-teal-pill:hover {
+  background-color: #00B8AE;
+  transform: scale(1.04);
+}
