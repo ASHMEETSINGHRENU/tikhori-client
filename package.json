@@ -1,0 +1,21 @@
+{
+  "name": "tikhori-luxury-spices",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Tikhori Foods — Luxury Artisanal Spices Website & Full Admin Suite",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "npm start --prefix server",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
