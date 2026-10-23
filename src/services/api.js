@@ -31,12 +31,17 @@ const setStorageData = (key, data) => {
   }
 };
 
+const API_BASE = (
+  import.meta.env.VITE_API_URL || 
+  (import.meta.env.DEV ? '' : 'https://tikhori-server.onrender.com')
+).replace(/\/$/, '');
+
 // Safe API caller with graceful local fallback
 export const api = {
   // PRODUCTS
   async getProducts() {
     try {
-      const res = await fetch('/api/products');
+      const res = await fetch(`${API_BASE}/api/products`);
       if (res.ok) {
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) return data;
@@ -49,7 +54,7 @@ export const api = {
 
   async getProductBySlug(slug) {
     try {
-      const res = await fetch(`/api/products/${slug}`);
+      const res = await fetch(`${API_BASE}/api/products/${slug}`);
       if (res.ok) return await res.json();
     } catch (e) {
       // fallback
@@ -60,7 +65,7 @@ export const api = {
 
   async createProduct(productData) {
     try {
-      const res = await fetch('/api/products', {
+      const res = await fetch(`${API_BASE}/api/products`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(productData)
@@ -85,7 +90,7 @@ export const api = {
 
   async updateProduct(id, updates) {
     try {
-      const res = await fetch(`/api/products/${id}`, {
+      const res = await fetch(`${API_BASE}/api/products/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updates)
@@ -102,7 +107,7 @@ export const api = {
 
   async deleteProduct(id) {
     try {
-      const res = await fetch(`/api/products/${id}`, { method: 'DELETE' });
+      const res = await fetch(`${API_BASE}/api/products/${id}`, { method: 'DELETE' });
       if (res.ok) return true;
     } catch (e) {
       // fallback
@@ -116,7 +121,7 @@ export const api = {
   // ORDERS
   async getOrders() {
     try {
-      const res = await fetch('/api/orders');
+      const res = await fetch(`${API_BASE}/api/orders`);
       if (res.ok) {
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) return data;
@@ -135,7 +140,7 @@ export const api = {
       status: 'Pending'
     };
     try {
-      const res = await fetch('/api/orders', {
+      const res = await fetch(`${API_BASE}/api/orders`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newOrder)
@@ -152,7 +157,7 @@ export const api = {
 
   async updateOrderStatus(id, status) {
     try {
-      const res = await fetch(`/api/orders/${id}/status`, {
+      const res = await fetch(`${API_BASE}/api/orders/${id}/status`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status })
@@ -170,7 +175,7 @@ export const api = {
   // STOCKISTS
   async getStockists() {
     try {
-      const res = await fetch('/api/stockists');
+      const res = await fetch(`${API_BASE}/api/stockists`);
       if (res.ok) {
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) return data;
@@ -188,7 +193,7 @@ export const api = {
       status: 'Active'
     };
     try {
-      const res = await fetch('/api/stockists', {
+      const res = await fetch(`${API_BASE}/api/stockists`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newStockist)
@@ -219,7 +224,7 @@ export const api = {
       status: 'Unread'
     };
     try {
-      await fetch('/api/enquiries', {
+      await fetch(`${API_BASE}/api/enquiries`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newEnquiry)
@@ -233,6 +238,15 @@ export const api = {
   },
 
   async getEnquiries() {
+    try {
+      const res = await fetch(`${API_BASE}/api/enquiries`);
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) return data;
+      }
+    } catch (e) {
+      // fallback
+    }
     return getStorageData(STORAGE_KEYS.ENQUIRIES, [
       {
         id: 'enq-101',
@@ -256,6 +270,15 @@ export const api = {
       source,
       date: new Date().toISOString().split('T')[0]
     };
+    try {
+      await fetch(`${API_BASE}/api/subscribers`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(sub)
+      });
+    } catch (e) {
+      // fallback
+    }
     const subs = getStorageData(STORAGE_KEYS.SUBSCRIBERS, [
       { id: 'sub-1', email: 'meera.iyer@gmail.com', name: 'Meera Iyer', source: 'Spice Club', date: '2026-10-18' },
       { id: 'sub-2', email: 'rajiv.sen@yahoo.com', name: 'Rajiv Sen', source: 'Newsletter', date: '2026-10-19' }
@@ -267,6 +290,15 @@ export const api = {
   },
 
   async getSubscribers() {
+    try {
+      const res = await fetch(`${API_BASE}/api/subscribers`);
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) return data;
+      }
+    } catch (e) {
+      // fallback
+    }
     return getStorageData(STORAGE_KEYS.SUBSCRIBERS, [
       { id: 'sub-1', email: 'meera.iyer@gmail.com', name: 'Meera Iyer', source: 'Spice Club', date: '2026-10-18' },
       { id: 'sub-2', email: 'rajiv.sen@yahoo.com', name: 'Rajiv Sen', source: 'Newsletter', date: '2026-10-19' }
