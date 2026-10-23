@@ -108,7 +108,7 @@ const AdminProducts = () => {
           { weight: '500g', price: Math.round(formData.price * 1.9), inStock: true },
           { weight: '1kg', price: Math.round(formData.price * 3.6), inStock: true }
         ],
-        ingredients: ['100% Pure Sun-Dried Spice', 'Cold Milled', 'Zero Artificial Additives'],
+        ingredients: ['Pure Sun-Dried Spice', 'Cold Milled', ' Artificial Additives'],
         howToUse: 'Add as required to curries, gravies, and marinades.',
         storage: 'Store in an airtight container away from moisture.'
       });

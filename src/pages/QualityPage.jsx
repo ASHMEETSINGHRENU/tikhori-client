@@ -144,7 +144,7 @@ const QualityPage = () => {
               <div className="w-40 h-40 rounded-full bg-[#8C2F16] text-[#D9A441] flex flex-col items-center justify-center p-4 text-center border-4 border-[#D9A441] shadow-xl">
                 <Award className="w-10 h-10 mb-1" />
                 <span className="font-display font-bold text-xs leading-tight">
-                  100% PURITY GUARANTEED
+                  PURITY GUARANTEED
                 </span>
               </div>
             </div>

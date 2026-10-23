@@ -108,7 +108,7 @@ const ProductDetailPage = () => {
             <div className="mt-6 flex items-center gap-4 text-xs text-[#4A3528]/80">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-700" />
-                100% Stemless & Pure
+               Stemless & Pure
               </span>
               <span className="flex items-center gap-1.5">
                 <Truck className="w-4 h-4 text-[#D9A441]" />

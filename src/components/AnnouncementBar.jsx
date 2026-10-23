@@ -17,11 +17,7 @@ const AnnouncementBar = () => {
             <Truck className="w-3.5 h-3.5 text-[#FCE74C]" />
             FREE SHIPPING ON ORDERS OVER ₹499
           </span>
-          <span className="text-[#FCE74C]/50">•</span>
-          <span className="flex items-center gap-1.5 text-white">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#FCE74C]" />
-            100% STEMLESS CHILLIES & ZERO CHEMICALS
-          </span>
+     
           <span className="text-[#FCE74C]/50">•</span>
           <span className="flex items-center gap-1.5 text-white">
             <HeartHandshake className="w-3.5 h-3.5 text-[#FCE74C]" />
@@ -32,7 +28,7 @@ const AnnouncementBar = () => {
         {/* Mobile Simple Marquee */}
         <div className="md:hidden flex items-center justify-center w-full text-center text-[10px] font-black text-white tracking-widest">
           <Sparkles className="w-3 h-3 text-[#FCE74C] mr-1.5 inline" />
-          <span>FOOD SHARED IS A MEMORY MADE • 100% PURE</span>
+          <span>FOOD SHARED IS A MEMORY MADE</span>
         </div>
 
       </div>

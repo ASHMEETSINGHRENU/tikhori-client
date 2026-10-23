@@ -8,7 +8,6 @@ const HERO_SPICES = [
     slug: 'lal-mirch-masala',
     name: 'Lal Mirch Masala',
     hindiName: 'लाल मिर्च पाउडर',
-    tag: '100% Stemless & Pure',
     accentColor: '#D1255C',
     glowColor: 'rgba(209, 37, 92, 0.45)',
     price: 145,

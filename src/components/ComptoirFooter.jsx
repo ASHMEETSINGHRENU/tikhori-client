@@ -27,7 +27,7 @@ const ComptoirFooter = () => {
 
             <div className="flex items-center gap-2 text-[11px] font-bold text-[#E85A18]">
               <ShieldCheck className="w-4 h-4 text-[#009E96]" />
-              <span>100% Stemless Chillies • Zero Chemicals</span>
+              <span> Stemless Chillies </span>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ const ComptoirFooter = () => {
             </h4>
             <div className="space-y-2.5 text-xs font-semibold text-[#4A121A]">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/tikhorifoods/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 hover:text-[#E85A18] transition-colors"
@@ -85,15 +85,7 @@ const ComptoirFooter = () => {
                 <Instagram className="w-4 h-4 text-[#E85A18]" />
                 <span>Instagram</span>
               </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 hover:text-[#E85A18] transition-colors"
-              >
-                <Facebook className="w-4 h-4 text-[#E85A18]" />
-                <span>Facebook</span>
-              </a>
+
             </div>
 
             <div className="pt-4">

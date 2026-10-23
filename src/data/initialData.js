@@ -14,7 +14,7 @@ export const INITIAL_PRODUCTS = [
     heatLevel: 'Fiery (3/3)',
     shortDescription: 'Add vibrant colour and a distinctive chilli flavour to your everyday dishes with Lal Mirch Powder, a kitchen essential for curries, gravies, marinades, and traditional Indian recipes.',
     about: 'Tikhori Lal Mirch Powder is sourced directly from heritage chilli-growing regions of India. Every chilli is carefully destemmed by hand, sun-cured naturally, and ground at controlled low temperatures to retain its essential capsaicin, deep scarlet hue, and unmistakable aroma without artificial coloring.',
-    ingredients: ['100% Stemless Premium Red Chillies', 'Naturally Sun-Dried', 'Zero Added Color or Preservatives'],
+    ingredients: ['Stemless Premium Red Chillies', 'Naturally Sun-Dried', 'Zero Added Color or Preservatives'],
     howToUse: 'Add 1/2 to 1 teaspoon during tempering (tadka) with cumin, or whisk directly into marinades and simmering gravies for a deep, authentic colour and balanced fiery kick.',
     storage: 'Store in an airtight ceramic or glass jar in a cool, dry pantry away from direct heat and sunlight.',
     weights: [
@@ -41,7 +41,7 @@ export const INITIAL_PRODUCTS = [
     heatLevel: 'Gentle & Healing',
     shortDescription: 'Bring warmth, golden colour, and earthy flavour to your cooking with Haldi Powder. A versatile ingredient for dals, curries, vegetables, and countless traditional dishes.',
     about: 'Our Haldi Powder is crafted from selected high-grade turmeric rhizomes known for their potent natural curcumin concentration. Slow-milled to an ultra-fine velvet texture, it imparts a golden radiance and rich earthy sweetness to your kitchen preparations.',
-    ingredients: ['100% Pure Salem Turmeric Rhizomes', 'Natural Essential Curcuminoids', 'Zero Fillers'],
+    ingredients: [' Pure Salem Turmeric Rhizomes', 'Natural Essential Curcuminoids', 'Zero Fillers'],
     howToUse: 'Add 1/4 to 1/2 teaspoon into sauteed vegetables, warm golden milk (haldi doodh), comforting lentils, or morning wellness brews.',
     storage: 'Keep container tightly sealed in a dark, dry cupboard to preserve sensitive curcumin compounds from light degradation.',
     weights: [
@@ -68,7 +68,7 @@ export const INITIAL_PRODUCTS = [
     heatLevel: 'Mellow (1/3)',
     shortDescription: 'Enjoy the distinctive aroma and mellow, citrusy notes of Dhaniya Powder. A versatile spice that adds depth and balance to curries, gravies, and homemade masalas.',
     about: 'Sourced from the finest green coriander seed harvests, Tikhori Dhaniya is gently roasted before cold-grinding. This technique seals in the volatile linalool oils, releasing an invigorating lemon-pine freshness the moment it touches hot oil or simmering gravies.',
-    ingredients: ['100% Handpicked Sun-Cured Coriander Seeds', 'Single-Origin Roasting'],
+    ingredients: ['Handpicked Sun-Cured Coriander Seeds', 'Single-Origin Roasting'],
     howToUse: 'Combine with turmeric and red chilli in equal measures to create the foundational triad of authentic North and South Indian curries.',
     storage: 'Store sealed in a cool, moisture-free cabinet away from the steam of the cooking stove.',
     weights: [
@@ -95,7 +95,7 @@ export const INITIAL_PRODUCTS = [
     heatLevel: 'Earthy Warmth',
     shortDescription: 'Bring a warm, earthy aroma to your kitchen with Jeera Powder. Ideal for dals, chaats, raitas, curries, and recipes that call for a distinctive cumin flavour.',
     about: 'Toasted in small artisanal batches on cast-iron plates until deep smoky perfection, then coarsely ground to preserve maximum fragrance. An indispensable condiment that elevates everyday yogurt, chaat, and dal into a memorable dining experience.',
-    ingredients: ['100% Whole Cumin Seeds (Cuminum cyminum)', 'Artisanal Pan-Roasted'],
+    ingredients: [' Whole Cumin Seeds (Cuminum cyminum)', 'Artisanal Pan-Roasted'],
     howToUse: 'Sprinkle as a finishing touch over fresh dahi, cucumber raita, street-style papdi chaat, roasted root vegetables, or whisk into butter-tempered tadka.',
     storage: 'Keep strictly sealed in an airtight tin to lock in its signature smoky essential oils.',
     weights: [
