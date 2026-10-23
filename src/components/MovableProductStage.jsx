@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Sparkles, ShoppingBag, Move, Check, ArrowRight, Play, Pause } from 'lucide-react';
-import { useCart } from '../context/CartContext';
-import { Link } from 'react-router-dom';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { Move, Play, Pause } from 'lucide-react';
 
 const HERO_SPICES = [
   {
@@ -65,12 +63,10 @@ const HERO_SPICES = [
 
 const MovableProductStage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [addedNotice, setAddedNotice] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+    const [isPaused, setIsPaused] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const { addToCart } = useCart();
-  const stageRef = useRef(null);
+    const stageRef = useRef(null);
   const resumeTimerRef = useRef(null);
 
   // Viewport resize tracking for perfect responsive 3D spacing
@@ -132,13 +128,6 @@ const MovableProductStage = () => {
   };
 
   const activeProduct = HERO_SPICES[activeIndex];
-
-  const handleAddToCart = (e) => {
-    e.stopPropagation();
-    addToCart(activeProduct, { weight: activeProduct.weight, price: activeProduct.price }, 1);
-    setAddedNotice(true);
-    setTimeout(() => setAddedNotice(false), 2000);
-  };
 
   // Responsive offsets: ensures every pouch has breathing room and packaging art is visible
   const sideOffset = isMobile ? 85 : 135;
@@ -333,110 +322,8 @@ const MovableProductStage = () => {
         })}
       </motion.div>
 
-      {/* 3. DEDICATED PRODUCT DETAILS BAR (POSITIONED CLEANLY BELOW THE POUCHES — ZERO OVERLAP) */}
-      <div className="w-full max-w-xl mt-3 sm:mt-5 px-2">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeProduct.id}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.35 }}
-            className="w-full bg-[#FFFDF9] border-2 border-[#4A121A]/20 hover:border-[#E85A18] rounded-2xl p-4 sm:p-5 shadow-xl text-[#4A121A] transition-all relative overflow-hidden"
-          >
-            {/* Top Color Accent Line */}
-            <div
-              className="absolute top-0 left-0 right-0 h-1 transition-colors duration-500"
-              style={{ backgroundColor: activeProduct.accentColor }}
-            />
-
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
-              
-              {/* Product Identity & Meta */}
-              <div className="space-y-1.5 text-left min-w-0 flex-1">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <span
-                    className="w-2.5 h-2.5 rounded-full inline-block flex-shrink-0"
-                    style={{ backgroundColor: activeProduct.accentColor }}
-                  />
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#E85A18]">
-                    {activeProduct.tag}
-                  </span>
-                  <span className="px-2 py-0.5 rounded-full text-[9px] font-bold bg-[#4A121A]/8 text-[#4A121A]">
-                    {activeProduct.badge}
-                  </span>
-                </div>
-
-                <div className="flex items-baseline gap-2 flex-wrap">
-                  <h3 className="font-fraunces font-black text-xl sm:text-2xl text-[#4A121A] tracking-tight leading-tight">
-                    {activeProduct.name}
-                  </h3>
-                  <span className="font-serif italic text-sm text-[#E85A18] font-bold">
-                    {activeProduct.hindiName}
-                  </span>
-                </div>
-
-                <p className="text-xs sm:text-[13px] text-[#4A121A]/85 font-normal leading-relaxed line-clamp-2">
-                  {activeProduct.description}
-                </p>
-
-                <div className="text-[11px] font-semibold text-[#4A121A]/70 pt-0.5 flex items-center gap-2 flex-wrap">
-                  <span>Pack Size: <strong className="text-[#4A121A]">{activeProduct.weight}</strong></span>
-                  <span className="text-[#4A121A]/30">•</span>
-                  <span>100% Pure Artisanal Milling</span>
-                </div>
-              </div>
-
-              {/* Price & Action Buttons */}
-              <div className="flex items-center justify-between sm:justify-end gap-3 pt-3 sm:pt-0 border-t sm:border-t-0 border-[#4A121A]/10 flex-shrink-0">
-                <div className="text-left sm:text-right">
-                  <span className="text-[9px] uppercase tracking-wider text-[#4A121A]/60 block font-bold">Price</span>
-                  <div className="flex items-baseline gap-1.5 sm:justify-end">
-                    <span className="font-fraunces font-black text-2xl sm:text-3xl text-[#E85A18] leading-none">
-                      ₹{activeProduct.price}
-                    </span>
-                    <span className="text-xs text-[#4A121A]/40 line-through">
-                      ₹{Math.round(activeProduct.price * 1.25)}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={handleAddToCart}
-                    className="btn-yellow-pill py-2.5 px-5 text-xs font-black shadow-md flex items-center gap-1.5 active:scale-95 transition-all"
-                  >
-                    {addedNotice ? (
-                      <>
-                        <Check className="w-4 h-4 text-emerald-800" />
-                        <span>Added!</span>
-                      </>
-                    ) : (
-                      <>
-                        <ShoppingBag className="w-4 h-4 text-[#4A121A]" />
-                        <span>Add to Bag</span>
-                      </>
-                    )}
-                  </button>
-
-                  <Link
-                    to={`/product/${activeProduct.slug}`}
-                    className="h-9 px-3 rounded-full border-2 border-[#4A121A]/20 hover:border-[#E85A18] hover:bg-[#E85A18]/10 flex items-center gap-1 text-[11px] font-bold text-[#4A121A] hover:text-[#E85A18] transition-colors"
-                    title="View Full Product Specifications"
-                  >
-                    <span>Details</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
       {/* 4. INFINITE PRODUCT SELECTOR PILLS */}
-      <div className="mt-4 flex items-center justify-center flex-wrap gap-2 z-20">
+      <div className="mt-6 sm:mt-8 flex items-center justify-center flex-wrap gap-2 z-20">
         {HERO_SPICES.map((spice, idx) => {
           const isSelected = idx === activeIndex;
           return (
