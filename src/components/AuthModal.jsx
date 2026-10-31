@@ -103,6 +103,9 @@ const AuthModal = () => {
 
         {/* Content */}
         <div className="p-6">
+          <div className="flex justify-center mb-3">
+            <img src="/assets/logo/logo.png" alt="Tikhori Heritage Foods" className="w-12 h-12 object-contain drop-shadow-xs" />
+          </div>
           {error && (
             <div className="mb-4 p-2.5 rounded-lg bg-red-50 border border-red-200 text-xs text-red-700">
               {error}

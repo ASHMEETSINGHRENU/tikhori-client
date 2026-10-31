@@ -14,6 +14,9 @@ const StoryPage = () => {
         
         {/* Hero Section */}
         <div className="text-center max-w-3xl mx-auto space-y-5">
+          <div className="flex justify-center mb-1">
+            <img src="/assets/logo/logo.png" alt="Tikhori Heritage Crest" className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-sm" />
+          </div>
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#8C2F16]/10 border border-[#8C2F16]/20 text-[#8C2F16] text-xs font-bold tracking-[0.2em] uppercase">
             <Compass className="w-3.5 h-3.5 text-[#D9A441]" />
             <span>ORIGIN & PURPOSE</span>

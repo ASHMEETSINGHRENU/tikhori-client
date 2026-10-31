@@ -30,18 +30,25 @@ const HeroComptoirSection = () => {
         </svg>
       </div>
 
-      {/* 2. Top-Right: Vintage Circular Postmark Stamp (- 1976 - MAHARASHTRA BOMBAY) */}
+      {/* 2. Top-Right: Vintage Circular Postmark Stamp with Brand Emblem */}
       <div className="absolute top-4 right-4 sm:right-12 z-10 pointer-events-none">
-        <div className="vintage-stamp text-[#C9460C] font-mono text-center p-2">
-          <span className="text-[9px] tracking-widest font-bold block uppercase border-b border-[#C9460C]/40 pb-0.5">
-            - 1976 -
-          </span>
-          <span className="text-[8px] font-black tracking-widest uppercase block pt-0.5">
-            TIKHORI
-          </span>
-          <span className="text-[7px] tracking-wider block">
-            PURE SPICE
-          </span>
+        <div className="vintage-stamp text-[#C9460C] font-mono text-center p-2 flex items-center gap-2">
+          <img
+            src="/assets/logo/logo.png"
+            alt="Tikhori Seal"
+            className="w-8 h-8 object-contain opacity-85"
+          />
+          <div>
+            <span className="text-[9px] tracking-widest font-bold block uppercase border-b border-[#C9460C]/40 pb-0.5">
+              - 1976 -
+            </span>
+            <span className="text-[8px] font-black tracking-widest uppercase block pt-0.5">
+              TIKHORI
+            </span>
+            <span className="text-[7px] tracking-wider block">
+              PURE SPICE
+            </span>
+          </div>
         </div>
       </div>
 

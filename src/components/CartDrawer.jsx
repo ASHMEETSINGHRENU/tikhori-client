@@ -57,14 +57,16 @@ const CartDrawer = () => {
             >
               {/* Header */}
               <div className="px-6 py-5 border-b border-[#EDE3D1] bg-[#F8F1E5] flex items-center justify-between">
-                <div>
-                  <h3 className="font-display font-black text-xl text-[#8C2F16] tracking-wide flex items-center gap-2">
-                    <ShoppingBag className="w-5 h-5 text-[#8C2F16]" />
-                    Your Spice Basket
-                  </h3>
-                  <p className="text-xs text-[#4A3528]/80 mt-0.5">
-                    Your favourite flavours are just a few steps away.
-                  </p>
+                <div className="flex items-center gap-3">
+                  <img src="/assets/logo/logo.png" alt="Tikhori" className="w-10 h-10 object-contain drop-shadow-xs" />
+                  <div>
+                    <h3 className="font-display font-black text-xl text-[#8C2F16] tracking-wide">
+                      Your Spice Basket
+                    </h3>
+                    <p className="text-xs text-[#4A3528]/80 mt-0.5">
+                      Your favourite flavours are just a few steps away.
+                    </p>
+                  </div>
                 </div>
                 <button
                   onClick={() => setIsCartOpen(false)}

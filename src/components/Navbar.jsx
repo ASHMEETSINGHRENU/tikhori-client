@@ -69,13 +69,20 @@ const Navbar = () => {
           </nav>
 
           {/* Center Brandmark Logo */}
-          <Link to="/" className="flex flex-col items-center group">
-            <span className="font-fatface text-2xl sm:text-3xl tracking-wide text-[#E85A18] group-hover:text-[#C9460C] transition-colors leading-none">
-              TIKHORI
-            </span>
-            <span className="text-[9px] tracking-[0.28em] font-bold text-[#4A121A] uppercase mt-1">
-              HERITAGE FOODS
-            </span>
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group">
+            <img
+              src="/assets/logo/logo.png"
+              alt="Tikhori Heritage Foods Logo"
+              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-xs"
+            />
+            <div className="flex flex-col items-start leading-none">
+              <span className="font-fatface text-2xl sm:text-3xl tracking-wide text-[#E85A18] group-hover:text-[#C9460C] transition-colors leading-none">
+                TIKHORI
+              </span>
+              <span className="text-[8px] sm:text-[9px] tracking-[0.28em] font-bold text-[#4A121A] uppercase mt-1">
+                HERITAGE FOODS
+              </span>
+            </div>
           </Link>
 
           {/* Right Action Controls */}
@@ -135,6 +142,22 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-[#FBF6ED] border-b-2 border-[#4A121A]/10 px-6 py-6 space-y-3"
           >
+            {/* Mobile Drawer Brand Header */}
+            <div className="flex items-center gap-3 pb-3 border-b border-[#4A121A]/10">
+              <img
+                src="/assets/logo/logo.png"
+                alt="Tikhori"
+                className="w-10 h-10 object-contain drop-shadow-xs"
+              />
+              <div>
+                <span className="font-fatface text-xl tracking-wide text-[#E85A18] block leading-none">
+                  TIKHORI
+                </span>
+                <span className="text-[8px] tracking-[0.28em] font-bold text-[#4A121A] uppercase">
+                  HERITAGE FOODS
+                </span>
+              </div>
+            </div>
             {[
               { name: 'LOCATIONS', path: '/stockists' },
               { name: 'SPICES & COLLECTION', path: '/collection' },

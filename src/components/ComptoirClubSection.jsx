@@ -18,9 +18,13 @@ const ComptoirClubSection = () => {
         {/* The Iconic Arched Keyhole Doorway Graphic */}
         <div className="relative w-full max-w-xs bg-[#FBF6ED] arch-doorway pt-14 pb-10 px-6 text-center border-t-4 border-x-4 border-[#4A121A] shadow-2xl space-y-4">
           
-          {/* Top Keyhole Notch */}
-          <div className="w-10 h-10 rounded-full bg-[#E85A18] mx-auto border-2 border-[#4A121A] flex items-center justify-center -mt-8 shadow-inner">
-            <Key className="w-5 h-5 text-[#FCE74C]" />
+          {/* Top Keyhole Notch / Brand Seal */}
+          <div className="w-14 h-14 rounded-full bg-[#FFFDF9] mx-auto border-2 border-[#4A121A] flex items-center justify-center -mt-10 shadow-md p-1.5 overflow-hidden">
+            <img
+              src="/assets/logo/logo.png"
+              alt="Club Tikhori Seal"
+              className="w-full h-full object-contain"
+            />
           </div>
 
           <div className="space-y-1">

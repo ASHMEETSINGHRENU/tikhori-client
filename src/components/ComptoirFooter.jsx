@@ -12,13 +12,20 @@ const ComptoirFooter = () => {
           
           {/* Column 1: Brandmark (5 cols) */}
           <div className="md:col-span-5 space-y-4">
-            <Link to="/" className="inline-block">
-              <span className="font-fatface text-3xl tracking-wide text-[#E85A18] block leading-none">
-                TIKHORI
-              </span>
-              <span className="text-[10px] tracking-[0.28em] font-bold text-[#4A121A] uppercase block mt-1">
-                HERITAGE FOODS
-              </span>
+            <Link to="/" className="flex items-center gap-3.5 group inline-flex">
+              <img
+                src="/assets/logo/logo.png"
+                alt="Tikhori Heritage Foods Logo"
+                className="w-14 h-14 sm:w-16 sm:h-16 object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-xs"
+              />
+              <div>
+                <span className="font-fatface text-3xl sm:text-4xl tracking-wide text-[#E85A18] block leading-none group-hover:text-[#C9460C] transition-colors">
+                  TIKHORI
+                </span>
+                <span className="text-[10px] tracking-[0.28em] font-bold text-[#4A121A] uppercase block mt-1">
+                  HERITAGE FOODS
+                </span>
+              </div>
             </Link>
 
             <p className="text-xs text-[#4A121A]/80 font-light leading-relaxed max-w-sm pt-1">
